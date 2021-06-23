@@ -2,8 +2,8 @@
   max-width: 1920px;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
   align-items: center;
 }
 
@@ -95,13 +95,11 @@ li {
 
 .pointer {
   position: relative;
-  align-self: flex-start;
-  top: 20px;
 
   &::after {
     content: '';
     position: absolute;
-    left: 146px;
+    left: -30px;
     border: 30px solid transparent;
     border-top: 40px solid black;
     z-index: 2;
@@ -110,4 +108,11 @@ li {
 
 .wheel ._active {
   transition: all 0.8s ease 0s;
+}
+
+.wheelBtn {
+  background-color: #fff;
+  color: #000;
+  border-radius: 10px;
+  border: 2px solid #000;
 }

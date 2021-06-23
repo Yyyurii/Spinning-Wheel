@@ -1,6 +1,9 @@
 // Spinning
 
-startUpWheel('.sliceWrapper');
+const startUpBtn = document.querySelector('.btnContainer');
+startUpBtn.addEventListener('click', () => {
+  startUpWheel('.sliceWrapper');
+});
 
 function startUpWheel(selector) {
   const wheel = window.document.querySelector(selector);
