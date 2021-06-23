@@ -1,10 +1,16 @@
 .wrapper {
+  max-width: 1920px;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  align-items: center;
 }
 
 .sliceWrapper {
@@ -107,4 +113,20 @@ li:nth-child(6) {
 
 li:nth-child(6) .slice {
   background: #fda9b9;
+}
+
+.pointer {
+  position: relative;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  top: 20px;
+}
+
+.pointer::after {
+  content: '';
+  position: absolute;
+  left: 146px;
+  border: 30px solid transparent;
+  border-top: 40px solid black;
+  z-index: 2;
 }

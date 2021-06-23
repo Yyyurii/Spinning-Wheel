@@ -1,6 +1,10 @@
 .wrapper {
+  max-width: 1920px;
+  height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
+  align-items: center;
 }
 
 .sliceWrapper {
@@ -86,5 +90,20 @@ li {
     .slice {
       background: #fda9b9;
     }
+  }
+}
+
+.pointer {
+  position: relative;
+  align-self: flex-start;
+  top: 20px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 146px;
+    border: 30px solid transparent;
+    border-top: 40px solid black;
+    z-index: 2;
   }
 }
