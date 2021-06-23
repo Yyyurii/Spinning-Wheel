@@ -130,3 +130,9 @@ li:nth-child(6) .slice {
   border-top: 40px solid black;
   z-index: 2;
 }
+
+.wheel ._active {
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}

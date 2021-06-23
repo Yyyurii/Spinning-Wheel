@@ -107,3 +107,7 @@ li {
     z-index: 2;
   }
 }
+
+.wheel ._active {
+  transition: all 0.8s ease 0s;
+}
