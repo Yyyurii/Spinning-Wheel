@@ -131,6 +131,10 @@ li:nth-child(6) .slice {
   z-index: 2;
 }
 
+.wheel {
+  margin: 15px;
+}
+
 .wheel ._active {
   -webkit-transition: all 0.8s ease 0s;
   -o-transition: all 0.8s ease 0s;
