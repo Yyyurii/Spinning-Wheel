@@ -22,7 +22,6 @@
 
   &__header {
     align-self: flex-end;
-    margin-right: 20px;
   }
 
   &__content {
@@ -38,6 +37,7 @@
     white-space: pre;
     text-align: center;
   }
+
   &__text-num {
     font-size: 70px;
   }
@@ -92,7 +92,9 @@
       transition: all 0.5s ease 0s;
     }
   }
-};
+}
+
+;
 
 .show {
   display: flex;
@@ -100,4 +102,58 @@
 
 .hide {
   display: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .modal {
+
+    &__text {
+      font-size: 40px;
+    }
+
+    &__closeBtn {
+
+      &:before,
+      &:after {
+        height: 53px;
+      }
+
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .modal {
+
+    &__content {
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .modal {
+
+    &__closeBtn {
+      right: 10px;
+
+      &:before,
+      &:after {
+        height: 40px;
+      }
+
+    }
+
+    &__text {
+      font-size: 30px;
+    }
+
+    &__wheelBtn {
+      font-size: 1.5em;
+    }
+  }
 }

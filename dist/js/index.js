@@ -47,7 +47,6 @@ function pointerCoord() {
   el.forEach((item, index) => {
     if (item.classList.contains('slice')) {
       modalText.textContent = item.textContent;
-      console.log(item.textContent)
     }
   })
 }
