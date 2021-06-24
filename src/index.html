@@ -5,8 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Spinning Wheel</title>
-  <link rel="stylesheet" href="css/index.min.css">
   <link rel="stylesheet" href="css/reset.min.css">
+  <link rel="stylesheet" href="css/index.min.css">
+  <link rel="stylesheet" href="css/modal.min.css">
 </head>
 <body>
 
@@ -19,6 +20,21 @@
 
     <div class="btnContainer">
       <button class="wheelBtn">Spin the wheel!</button>
+    </div>
+
+    <div class="fixed-overlay">
+      <div class="modal">
+        <div class="modal__header">
+          <div class="modal__closeBtn"></div>
+        </div>
+        <div class="modal__content">
+          <div class="modal__img">
+            <img src="images/Spin-To-Win.png" alt="">
+          </div>
+          <div class="modal__text">On the section number<br><span class="modal__text-num">5</span></div>
+        </div>
+        <button class="wheelBtn modal__wheelBtn">Spin the wheel Again!</button>
+      </div>
     </div>
   </div>
   
