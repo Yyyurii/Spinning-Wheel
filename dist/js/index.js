@@ -1,42 +1,39 @@
 // Spinning
 
-const startUpBtn = document.querySelector('.btnContainer');
-startUpBtn.addEventListener('click', () => {
-  startUpWheel('.sliceWrapper');
+const startBtn = document.querySelector('.btnContainer');
+const wheel = window.document.querySelector('.sliceWrapper');
+let deg = 0;
+
+startBtn.addEventListener('click', () => {
+  startBtn.style.pointerEvents = 'none';
+  startUpWheel();
+
   setTimeout(() => {
     const pointerEl = pointerCoord();
     console.log(pointerEl);
   }, 3000)
 });
 
-function startUpWheel(selector) {
-  const wheel = window.document.querySelector(selector);
-  makeCircle(wheel, 0);
-};
+wheel.addEventListener('transitionend', () => {
+  wheel.classList.remove('_active');
+  startBtn.style.pointerEvents = 'auto';
+  const actualDeg = deg % 360;
+  wheel.style.transform = `rotate(${actualDeg}deg)`;
+})
 
-function makeCircle(item, targetAngle) {
-  changeRotate(item, targetAngle);
-  const step = 10;
-
-  if (targetAngle < 710) {
-    setTimeout(function () {
-      makeCircle(item, targetAngle + step);
-    }, 20);
-  }
-  console.log(targetAngle);
-};
-
-function changeRotate(item, val) {
-  item.classList.add('_active');
-  item.style.transform = "rotate(" + val + "deg)";
-  item.style.webkitTransform = "rotate(" + val + "deg)";
-  item.style.mozTransform = "rotate(" + val + "deg)";
+function startUpWheel() {
+  deg = Math.floor(3000 + Math.random() * 3000);
+  wheel.classList.add('_active');
+  wheel.style.transform = `rotate(${deg}deg)`;
+  wheel.style.webkitTransform = `rotate(${deg}deg)`;
+  wheel.style.mozTransform = `rotate(${deg}deg)`;
 };
 
 //pointer coordinates
 
 function pointerCoord() {
   const el = document.elementsFromPoint(374.5, 245.5);
+  console.log(el);
   for (let key of el) {
     return key.id
   }

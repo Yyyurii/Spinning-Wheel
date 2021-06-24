@@ -37,8 +37,8 @@ li {
   span {
     position: absolute;
     z-index: 2;
-    top: 75%;
-    left: 15%;
+    top: 77%;
+    left: 13%;
     font: icon;
     font-size: 40px;
     transform: rotate(45deg);
@@ -111,7 +111,7 @@ li {
 }
 
 .wheel ._active {
-  transition: all 0.8s ease 0s;
+  transition: all 2.2s ease-in-out 0s;
 }
 
 .wheelBtn {

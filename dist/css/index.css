@@ -49,8 +49,8 @@ li {
 li span {
   position: absolute;
   z-index: 2;
-  top: 75%;
-  left: 15%;
+  top: 77%;
+  left: 13%;
   font: icon;
   font-size: 40px;
   -webkit-transform: rotate(45deg);
@@ -136,9 +136,9 @@ li:nth-child(6) .slice {
 }
 
 .wheel ._active {
-  -webkit-transition: all 0.8s ease 0s;
-  -o-transition: all 0.8s ease 0s;
-  transition: all 0.8s ease 0s;
+  -webkit-transition: all 2.2s ease-in-out 0s;
+  -o-transition: all 2.2s ease-in-out 0s;
+  transition: all 2.2s ease-in-out 0s;
 }
 
 .wheelBtn {
