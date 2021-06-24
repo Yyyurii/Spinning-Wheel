@@ -10,8 +10,8 @@ startBtn.addEventListener('click', () => {
 
   setTimeout(() => {
     const pointerEl = pointerCoord();
-    console.log(pointerEl);
-  }, 3000)
+    console.log(pointerEl)
+  }, 2500)
 });
 
 wheel.addEventListener('transitionend', () => {
@@ -32,9 +32,13 @@ function startUpWheel() {
 //pointer coordinates
 
 function pointerCoord() {
-  const el = document.elementsFromPoint(374.5, 245.5);
-  console.log(el);
-  for (let key of el) {
-    return key.id
-  }
+  const pointer = document.querySelector('.pointer');
+  const x = pointer.getBoundingClientRect().x;
+  const y = pointer.getBoundingClientRect().y;
+  const el = document.elementsFromPoint(x, y + 35);
+  el.forEach((item, index) => {
+    if (item.classList.contains('slice')) {
+      console.log(item.textContent)
+    }
+  })
 }
