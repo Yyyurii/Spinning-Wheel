@@ -11,10 +11,10 @@ startBtn.forEach(btn => {
     setTimeout(() => {
       const pointerEl = pointerCoord();
       console.log(pointerEl)
-    }, 2500)
+    }, 3500)
     setTimeout(() => {
       showModal();
-    }, 3500)
+    }, 4000)
   });
 })
 
@@ -25,6 +25,7 @@ wheel.addEventListener('transitionend', () => {
   wheel.style.transform = `rotate(${actualDeg}deg)`;
 })
 
+document.addEventListener('keydown', event => event.code === "Escape" ? closeModal() : console.log('not this key'));
 document.querySelector('.modal__closeBtn').addEventListener('click', closeModal);
 
 // Spinning

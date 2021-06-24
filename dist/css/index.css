@@ -136,9 +136,9 @@ li:nth-child(6) .slice {
 }
 
 .wheel ._active {
-  -webkit-transition: all 2.2s ease-in-out 0s;
-  -o-transition: all 2.2s ease-in-out 0s;
-  transition: all 2.2s ease-in-out 0s;
+  -webkit-transition: all 3s ease-in-out 0s;
+  -o-transition: all 3s ease-in-out 0s;
+  transition: all 3s ease-in-out 0s;
 }
 
 .wheelBtn {
